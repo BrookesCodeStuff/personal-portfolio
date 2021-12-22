@@ -1,4 +1,16 @@
 /* -------------------------------------------- */
+/*                 GLOBAL STYLES                */
+/* -------------------------------------------- */
+
+:root {
+  /* colors */
+  --cl-light: rgb(248, 237, 227);
+  --cl-light-green: rgb(189, 210, 182);
+  --cl-med-green: rgb(162, 178, 159);
+  --cl-dark-green: rgb(121, 135, 119);
+}
+
+/* -------------------------------------------- */
 /*          MODERN CSS RESET BASED ON           */
 /* https://piccalil.li/blog/a-modern-css-reset/ */
 /* -------------------------------------------- */
@@ -36,6 +48,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: var(--cl-light);
+  font-family: 'Barlow', sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
