@@ -4,10 +4,10 @@
 
 :root {
   /* colors */
-  --cl-light: rgb(248, 237, 227);
-  --cl-light-green: rgb(189, 210, 182);
-  --cl-med-green: rgb(162, 178, 159);
-  --cl-dark-green: rgb(121, 135, 119);
+  --primary-dark: 18, 39, 65;
+  --primary-light: 180, 176, 193;
+  --accent-dark: 102, 31, 143;
+  --accent-light: 136, 224, 239;
 }
 
 /* -------------------------------------------- */
@@ -48,7 +48,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: var(--cl-light);
+  background: rgb(var(--primary-light));
+  color: rgb(var(--primary-dark));
   font-family: 'Barlow', sans-serif;
 }
 
@@ -77,4 +78,115 @@ img {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* -------------------------------------------- */
+/*           Header / Nav Styles                */
+/* -------------------------------------------- */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  background: rgb(var(--primary-dark));
+  color: rgb(var(--primary-light));
+}
+
+header h1 {
+  margin: 0 20px;
+  font-size: 2rem;
+}
+
+nav {
+  width: 100vw;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  padding: 0 10px;
+}
+
+nav a {
+  color: rgb(var(--primary-light));
+  text-decoration: none;
+}
+
+/* -------------------------------------------- */
+/*           Hero Section Styling               */
+/* -------------------------------------------- */
+
+.hero-image {
+  background-image: url('../assets/images/milky-way-mobile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+}
+
+.hero-image h2 {
+  background: rgba(var(--accent-light), 0.6);
+  color: rgb(var(--primary-dark));
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+
+/* -------------------------------------------- */
+/*        Main Content Section Styling          */
+/* -------------------------------------------- */
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  margin: 10px auto 15px auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(var(--accent-dark));
+  width: 80vw;
+}
+
+/* About me styling */
+.about p {
+  width: 90vw;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* My work styling */
+
+/* Contact me styling */
+.contact-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact img {
+  width: 50px;
+}
+
+/* -------------------------------------------- */
+/*                Footer Styling                */
+/* -------------------------------------------- */
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+  padding: 10px 0;
+  background: rgb(var(--primary-dark));
+  color: rgb(var(--primary-light));
 }
