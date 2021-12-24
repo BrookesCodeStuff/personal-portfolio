@@ -220,8 +220,27 @@ section h2 {
   align-items: center;
 }
 
+.contact a {
+  padding: 20px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+
 .contact img {
+  filter: invert(67%) sepia(2%) saturate(1426%) hue-rotate(213deg)
+    brightness(106%) contrast(93%);
   width: 50px;
+}
+
+.contact a:hover {
+  background: rgb(var(--accent-dark));
+  transition: background 0.4s ease-in-out;
+}
+
+.contact a:hover img {
+  filter: invert(85%) sepia(15%) saturate(1162%) hue-rotate(149deg)
+    brightness(99%) contrast(90%);
+  transition: filter 0.4s ease-in-out;
 }
 
 /* -------------------------------------------- */
@@ -232,6 +251,6 @@ footer {
   text-align: center;
   margin-top: 25px;
   padding: 10px 0;
-  background: rgb(var(--primary-dark));
-  color: rgb(var(--primary-light));
+  background: rgb(var(--primary-light));
+  color: rgb(var(--primary-dark));
 }
