@@ -11,6 +11,9 @@ The purpose of this project is to create a responsive, professional portfolio wh
 - Images: [pixabay](https://pixabay.com/)
 - Social Media Icons: [simpleicons.org](https://simpleicons.org/)
 
+## Live Site
+[https://brookescodestuff.github.io/personal-portfolio/](https://brookescodestuff.github.io/personal-portfolio/)
+
 ## Badges
 
 ![twitter](https://img.shields.io/twitter/follow/brookelikesowls?style=social)
