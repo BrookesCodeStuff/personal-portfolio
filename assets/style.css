@@ -110,13 +110,16 @@ nav ul {
   padding: 0;
 }
 
-nav li {
-  padding: 0 10px;
-}
-
 nav a {
+  padding: 10px 20px;
   color: rgb(var(--primary-light));
   text-decoration: none;
+}
+
+nav a:hover {
+  background: rgb(var(--accent-dark));
+  color: rgba(var(--accent-light));
+  transition: all 0.4s ease-in-out;
 }
 
 /* -------------------------------------------- */
