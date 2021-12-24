@@ -95,7 +95,9 @@ header {
 
 header h1 {
   margin: 0 20px;
-  font-size: 2rem;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 3vw, 4rem);
   color: rgb(var(--accent-light));
 }
 
@@ -116,6 +118,7 @@ nav a {
   color: rgb(var(--primary-light));
   text-decoration: none;
   transition: all 0.4s ease-in-out;
+  font-size: clamp(1rem, 3vh, 1.5rem);
 }
 
 nav a:hover {
@@ -144,6 +147,8 @@ nav a:hover {
   position: absolute;
   right: 0;
   bottom: 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: clamp(1.2rem, 3vw, 3rem);
 }
 
 /* -------------------------------------------- */
@@ -153,15 +158,17 @@ nav a:hover {
 section {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 section h2 {
   text-align: center;
-  margin: 10px auto 15px auto;
+  margin: 10px auto 20px auto;
   padding-bottom: 10px;
   border-bottom: 2px solid rgb(var(--accent-dark));
   width: 80vw;
+  font-size: clamp(2rem, 4vw, 5rem);
+  text-transform: uppercase;
 }
 
 /* About me styling */
@@ -176,16 +183,19 @@ section h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  width: 95vw;
+  margin: 0 auto;
 }
 
 .project {
   position: relative;
   border: 2px solid rgba(var(--accent-light));
   background: rgb(var(--accent-dark));
+  overflow: hidden;
 }
 
 .project img {
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0.4;
   transition: opacity 0.5s ease-in-out;
 }
@@ -211,6 +221,14 @@ section h2 {
   left: auto;
   right: 0;
   padding: 10px 5px 10px 20px;
+}
+
+.label p:first-child {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.label p:nth-child(2) {
+  font-weight: 100;
 }
 
 /* Contact me styling */
@@ -253,4 +271,41 @@ footer {
   padding: 10px 0;
   background: rgb(var(--primary-light));
   color: rgb(var(--primary-dark));
+}
+
+/* -------------------------------------------- */
+/*                Media Queries                 */
+/* -------------------------------------------- */
+
+/* Tablet styling */
+@media screen and (min-width: 50rem) {
+  .projects {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .project {
+    height: 30vw;
+    width: 50%;
+  }
+
+  .project:first-child {
+    width: 100%;
+  }
+
+  .project img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project:nth-child(even) .label {
+    left: 0;
+    right: auto;
+    padding: 10px 20px 10px 5px;
+  }
+}
+
+/* Desktop styling */
+@media screen and (min-width: 62.5rem) {
 }
