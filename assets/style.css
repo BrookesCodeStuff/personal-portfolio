@@ -260,7 +260,8 @@ section h2 {
   width: 50px;
 }
 
-.contact a:hover img {
+.contact a:hover img,
+.contact a:focus img {
   filter: invert(85%) sepia(15%) saturate(1162%) hue-rotate(149deg)
     brightness(99%) contrast(90%);
   transition: filter 0.4s ease-in-out;
@@ -376,5 +377,12 @@ footer {
 
   .project .label {
     bottom: 1vw;
+  }
+
+  .contact-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
