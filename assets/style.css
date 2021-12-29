@@ -48,7 +48,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background: rgb(var(--primary-dark));
+  background-image: linear-gradient(
+    rgb(var(--primary-dark)),
+    rgb(var(--accent-dark))
+  );
   color: rgb(var(--primary-light));
   font-family: 'Barlow', sans-serif;
 }
@@ -98,7 +101,8 @@ header h1 {
   font-family: 'Roboto Mono', monospace;
   text-transform: uppercase;
   font-size: clamp(2rem, 3vw, 4rem);
-  color: rgb(var(--accent-light));
+  color: rgb(var(--accent-dark));
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
@@ -167,7 +171,7 @@ section h2 {
   text-align: center;
   margin: 10px auto 20px auto;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgb(var(--accent-dark));
+  border-bottom: 2px solid rgb(var(--accent-light));
   width: 80vw;
   font-size: clamp(2rem, 3vw, 4rem);
   text-transform: uppercase;
@@ -250,21 +254,10 @@ section h2 {
   align-items: center;
 }
 
-.contact a {
-  padding: 20px;
-  border-radius: 50%;
-  transition: all 0.4s ease-in-out;
-}
-
 .contact img {
   filter: invert(67%) sepia(2%) saturate(1426%) hue-rotate(213deg)
     brightness(106%) contrast(93%);
   width: 50px;
-}
-
-.contact a:hover {
-  background: rgb(var(--accent-dark));
-  transition: background 0.4s ease-in-out;
 }
 
 .contact a:hover img {
@@ -361,7 +354,7 @@ footer {
     margin-right: 30px;
     padding-right: 20px;
     border-bottom: none;
-    border-right: 2px solid rgb(var(--accent-dark));
+    border-right: 2px solid rgb(var(--accent-light));
     font-size: clamp(2rem, 4vw, 5rem);
     text-transform: uppercase;
     flex: 0 0 20vw;
